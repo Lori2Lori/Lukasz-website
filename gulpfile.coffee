@@ -25,7 +25,7 @@ posts = []
 gulp.task 'posts', ->
   # Create html file for each .md file in content directory.
   # Clear require cache - otherwise changes to template won't be reflected
-  tpl_path = path.resolve './html/post.coffee'
+  tpl_path = path.resolve './html/page.coffee'
   require.cache[tpl_path] = null
   template = require tpl_path
 

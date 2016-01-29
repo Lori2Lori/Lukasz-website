@@ -1,6 +1,31 @@
-.main-picture
-  background-color: gray
-  margin: 0
+.header
   display: flex
-  flex-flow: row wrap
-  width: 100%
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: baseline
+
+  padding: 5rem 0 10rem 5rem
+
+  .logo
+    .name
+      font-size: 16rem
+
+  .menu
+    display: flex
+    flex-wrap: wrap
+
+    padding: 5rem
+    padding-bottom: 10rem
+    list-style-type: none
+
+    li
+      padding-right: 5rem
+      text-transform: uppercase
+
+      a
+        text-decoration: none
+        color: bronze
+
+        &:hover
+          text-decoration: underline
+          color: orange

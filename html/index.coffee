@@ -8,7 +8,6 @@ markdown = new View (md) ->
   @raw marked md
 
 module.exports = new View (posts) ->
-
   @doctype 5
   @html lang: "en", =>
     @head =>
@@ -19,50 +18,50 @@ module.exports = new View (posts) ->
       @title "Łukasz Bańkowski radca prawny"
 
     @body =>
-      @tag 'container', =>
+      @div class: 'container', =>
 
         @div class: 'header', =>
           @div class: 'logo', =>
-            @h3 'Łukasz Bańkowski'
-            @h3 'Law advisor'
-          @div class: 'menu', =>
-            @div 'CONTACT'
-            @div 'CERTIFICATION'
-            @div 'REFERENCES'
+            @div class: 'name', 'Łukasz Bańkowski'
+            @div class: 'law', 'Law advisor'
+          @ul class: 'menu', =>
+            @li =>
+              @a href: './', 'CONTACT'
+            @li =>
+              @a href: './','CERTIFICATION'
+            @li =>
+              @a href: './','REFERENCES'
 
         @div class: 'main-picture', =>
           @h1 'PROFESSIONAL LEGAL HELP AT AFFORDABLE RATES'
-          @h2 'GO TO CONTACT'
-
-        @div class: 'main', =>
-          @div class: 'areas-of-expertise', =>
-            @div 'CONTRACTS'
-            @div 'PERSONAL'
-            @div 'ADMINISTRATIVE'
+        @div class: 'main-content', =>
+          @h2 'AREAS OF EXPERTISE'
+          @ul class: 'areas-of-expertise', =>
+            @li 'contracts'
+            @li 'personal'
+            @li 'administrative law'
           @div class: 'description', =>
             @h2 'MY STORY'
-            @p 'I am certified lawyer with several years of experience.'
+            @p 'I am certified lawyer with several years of experience. Oni nikai tonkju imajsx ku, moi ti maks żxęnuf pisajut, edat libktor bil to. Kupit vlósiś nózxis śo des, odnakju potrebijsx vo gaz. Divąjte prekrasju mi moi, kak bo slozxju celuvajt, użx eś vódą vorćxanie. Ońa to dajt slovis dumajut.'
+          @div class: 'references', =>
+            @h2 'REFERENCES'
+            @p """Łukasz is one of the most energetic lawyers I've been working with."""
+            @h5 'JAN KOWALSKI - RADCA PRAWNY'
 
-        @div class: 'references', =>
-          @h2 'REFERENCES'
-          @p """Łukasz is one of the most energetic lawyers I've been working with."""
-          @h5 'JAN KOWALSKI - RADCA PRAWNY'
-
-        @div class: 'certification', =>
-          @h2 'PROFESSIONAL CERTIFICATION'
-          @p '(wpis na listę radców prawnych, inne)'
+          @div class: 'certification', =>
+            @h2 'PROFESSIONAL CERTIFICATION'
+            @p '(np. wpis na listę radców prawnych, inne)'
 
         @footer =>
-          @h2 'CONTACT'
-          @p 'I work in Warsaw and Łódź'
 
           @div class: 'logo', =>
-            @h3 'Łukasz Bańkowski'
-            @h3 'Law advisor'
+            @div class: 'name', 'Łukasz Bańkowski'
+            @div class: 'law', 'Law advisor'
 
           @div class: 'contact', =>
+            @h2 'CONTACT'
+            @p 'I work in Warsaw and Łódź'
             @p 'Phone: 500-100-200'
             @p 'Email: info@lukaszbankowski.pl'
-
-          @div class: 'copyright', =>
-            @text "© Dorota Cieślińska 2015 url"
+            @p class: 'copyright', =>
+              @a href: 'lori2lori.com', '© Created by Dorota Cieślińska 2016'

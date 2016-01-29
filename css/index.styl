@@ -1,12 +1,37 @@
+// Colors:
+bronze      = hsl(27, 17%, 21%)
+lightbronze = hsl(60, 6%, 51%)
+bright      = hsl(60, 38%, 92%)
+orange      = hsl(39,100%,50%)
+
+// Media:
+phone     = 'screen and (max-width: 600px)'
+tablet    = 'screen and (min-width: 800px)'
+
+// Typography:
 @import 'typography'
-@import 'header'
+
+
+// Layout
+html
+  font-size         2px
+
+  @media tablet
+    font-size       3px
+
 
 body
   background: white
   margin: 0
 
-container
+.container
   display: flex
   flex-flow: column wrap
-  width: 100%
+  max-width: 900px
   margin: auto
+
+  @import 'logo'
+  @import 'header'
+  @import 'main-picture'
+  @import 'main-content'
+  @import 'footer'
