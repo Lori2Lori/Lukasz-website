@@ -8,7 +8,7 @@ menu:
     url: '/en'
 
 title: "Łukasz Bańkowski radca prawny"
-subtitle: 'Profesjonalne doradctwo prawne w korzystnej cenie'
+subtitle: 'Profesjonalne doradztwo prawne w korzystnej cenie'
 
 expertise:
   title: 'Specjalizacja'
