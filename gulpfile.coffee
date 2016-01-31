@@ -78,7 +78,11 @@ gulp.task 'assets', ->
     .src options.assets
     .pipe gulp.dest options.destination
 
+gulp.task 'clean', (done) ->
+  del options.destination, done
+
 gulp.task 'build', gulp.series [
+  'clean'
   'posts'
   'index'
   'css'
@@ -92,10 +96,6 @@ gulp.task 'watch', (done) ->
     'css/**/*'
   ], gulp.series ['build']
   gulp.watch options.assets, gulp.series ['assets']
-
-
-gulp.task 'clean', (done) ->
-  del options.destination, done
 
 webserver = require 'gulp-webserver',
 
