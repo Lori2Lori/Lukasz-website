@@ -54,15 +54,10 @@ gulp.task 'posts', ->
       posts.push post
       do done
 
-gulp.task 'index', (done) ->
-  # Create index.html file from index.coffee template and posts array.
-  # The posts array is generated in 'posts' task.
-
-  tpl_path = path.resolve './html/index.coffee'
-  require.cache[tpl_path] = null
-  template = require tpl_path
-  html = template posts
-  fs.writeFile "build/index.html", html, done
+gulp.task 'index', () ->
+  gulp
+    .src "build/pl/index.html"
+    .pipe gulp.dest "build"
 
 gulp.task 'css', ->
   #Create index.css file from index.styl
