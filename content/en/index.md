@@ -29,7 +29,7 @@ references:
 
 certificates:
   - title: 'Professional certification'
-    label: '(np. wpis na listę radców prawnych, inne)'
+    label: '2008 - Master of law'
 
 contact:
   title: 'Contact'
